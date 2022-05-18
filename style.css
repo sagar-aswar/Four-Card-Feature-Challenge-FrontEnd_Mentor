@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+
+/* Body & Universal Selector */
+
+* {
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: hsl(0, 0%, 98%);
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    font-size: 15px;
+}
+
+
+/* Attribution Styling */
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+
+/* Section Styling */
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.headings {
+    text-align: center;
+    /* border: 2px dashed blue; */
+    width: 510px;
+    margin: 25px auto;
+}
+
+.headings h2 {
+    color: hsl(234, 12%, 34%);
+    font-weight: 200;
+    font-size: 27.5px;
+    margin: 0;
+}
+
+.headings h1 {
+    color: hsl(234, 12%, 34%);
+    font-size: 27.5px;
+    margin: 0;
+}
+
+.headings p {
+    color: hsl(229, 6%, 66%);
+    margin: 15px 0;
+    font-size: 14px;
+}
+
+.card-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.card {
+    width: 300px;
+    border-radius: 7.5px;
+    padding: 10px;
+    margin: 20px 0;
+    box-shadow: 0px 10px 20px hsla(228, 45%, 44%, 0.212);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.card h3 {
+    color: hsl(234, 12%, 34%);
+    font-size: 18px;
+    margin: 0;
+}
+
+.card p {
+    color: hsl(229, 6%, 66%);
+    font-size: 12px;
+    padding: 0;
+}
+
+.image {
+    align-self: flex-end;
+    margin: 15px 0 5px 0;
+}
+
+#cyan,
+#orange,
+#red,
+#blue {
+    position: relative;
+    padding: 20px 25px;
+}
+
+#cyan::before,
+#orange::before,
+#blue::before,
+#red::before {
+    content: "";
+    height: 3.5px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 15px 15px 0 0;
+}
+
+#cyan::before {
+    background-color: hsl(180, 62%, 55%);
+}
+
+#blue::before {
+    background-color: hsl(212, 86%, 64%);
+}
+
+#orange::before {
+    background-color: hsl(34, 97%, 64%);
+}
+
+#red::before {
+    background-color: hsl(0, 78%, 62%);
+}
+
+@media (max-width:375px) {
+    .headings {
+        width: 350px;
+        padding: 0 0;
+    }
+    .headings h2,
+    .headings h1 {
+        font-size: 25px;
+    }
+    .headings p {
+        margin: 15px 30px;
+    }
+    .card-section {
+        flex-direction: column;
+        width: 350px;
+    }
+}
